@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
 * {
   padding: 0;
   margin: 0;
 }
+body{
+  background-color: black;
+}
+.screen{
+  display: flex;
+  justify-content: space-around;
+}
 .board {
+  position: relative;
+  top: 5%;
   width: 600px;
   margin: auto;
   display: grid;
@@ -14,12 +26,110 @@
   font-family: 'Open Sans', sans-serif;
   width: 200px;
   height: 200px;
-  border: 1px solid black;
+  border: 1px solid white;
   text-align: center;
   font-size: 90px;
   line-height: 200px;
+  color: white;
 }
 .highlighted{
   color: brown;
 }
 
+.screen{
+  width: 100vw;
+  height: 100vh;
+ 
+}
+.main-menu {
+  width: 400px;
+ color: white;
+ text-align: center;
+ font-size: 150px;
+ font-family: 'Bebas Neue', cursive;
+}
+.play-button{
+  font-size: 30px;
+  font-weight: 600;
+  background-color: white;
+  display: block;
+  width: 200px;
+  height: 75px;
+  margin: auto;
+  border: none;
+  border-radius: 5px;
+}
+.side-card{
+  margin-top: 100px;
+  border: 2px solid white;
+  height: 500px;
+  width: 400px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.side-card-ingame{
+  width: 370px !important;
+  height: 450px !important;
+}
+.card-name{
+  color: white;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid white;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  display: block;
+  margin: auto;
+  font-size: 50px;
+  width: 80%;
+}
+.card-name:focus{
+  outline: none;
+}
+.card-player-type{
+  margin-top: 15%;
+  margin-bottom: 15%;
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+.card-mark{
+  margin-top: 15%;
+  margin-bottom: 15%;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+.card-score{
+  text-align: center;
+  margin-top: 10%;
+  font-size: 50px;
+  color: white;
+}
+
+.blocker{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.699);
+  width: 100vw;
+  height: 100vh;
+  transition: 0.3s;
+  opacity: 0;
+}
+.win-message{
+  transition: 1s;
+  margin-top: 20%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 100px;
+  z-index: -1;
+  opacity: 0;
+}
+.active{
+  opacity: 1;
+  z-index: 1;
+}
