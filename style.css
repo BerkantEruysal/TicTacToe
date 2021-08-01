@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+.board {
+  width: 600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.field {
+  transition: color 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 90px;
+  line-height: 200px;
+}
+.highlighted{
+  color: brown;
+}
+
